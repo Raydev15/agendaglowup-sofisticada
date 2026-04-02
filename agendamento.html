@@ -28,9 +28,9 @@
         </div>
     </nav>
 
-    <header class="hero d-flex align-items-center" style="min-height: 40vh;">
+    <header class="hero d-flex align-items-center" style="padding: 80px 0;">
         <div class="container text-center">
-            <h1 class="display-4 mb-3">Faça seu <span>Agendamento</span></h1>
+            <h1 class="display-3 mb-3">Faça seu <span>Agendamento</span></h1>
             <p class="lead mb-4">Preencha o formulário abaixo e garanta seu horário exclusivo.</p>
         </div>
     </header>
@@ -39,26 +39,26 @@
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-8">
-                    <div class="card border-0 shadow-sm p-4 p-md-5">
+                    <div class="card p-4 p-md-5">
                         <h2 class="h4 mb-4" style="color: var(--primary-color);">Novo Agendamento</h2>
                         <form>
                             <div class="mb-4">
-                                <label class="form-label fw-bold">Seu Nome Completo</label>
-                                <input type="text" class="form-control form-control-lg" placeholder="Ex: Maria Silva">
+                                <label class="form-label fw-bold" style="color: var(--text-color);">Seu Nome Completo</label>
+                                <input type="text" class="form-control" placeholder="Ex: Maria Silva">
                             </div>
                             <div class="row mb-4">
                                 <div class="col-md-6">
-                                    <label class="form-label fw-bold">E-mail</label>
-                                    <input type="email" class="form-control form-control-lg" placeholder="seu@email.com">
+                                    <label class="form-label fw-bold" style="color: var(--text-color);">E-mail</label>
+                                    <input type="email" class="form-control" placeholder="seu@email.com">
                                 </div>
-                                <div class="col-md-6 mt-4 mt-md-0">
-                                    <label class="form-label fw-bold">WhatsApp</label>
-                                    <input type="tel" class="form-control form-control-lg" placeholder="(11) 99999-9999">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold" style="color: var(--text-color);">WhatsApp</label>
+                                    <input type="tel" class="form-control" placeholder="(11) 99999-9999">
                                 </div>
                             </div>
                             <div class="mb-4">
-                                <label class="form-label fw-bold">Serviço Desejado</label>
-                                <select class="form-select form-select-lg">
+                                <label class="form-label fw-bold" style="color: var(--text-color);">Serviço Desejado</label>
+                                <select class="form-select">
                                     <option value="">Selecione um serviço...</option>
                                     <optgroup label="Cabelo">
                                         <option>Corte Feminino — R$45</option>
@@ -79,12 +79,12 @@
                             </div>
                             <div class="row mb-4">
                                 <div class="col-md-6">
-                                    <label class="form-label fw-bold">Data</label>
-                                    <input type="date" class="form-control form-control-lg">
+                                    <label class="form-label fw-bold" style="color: var(--text-color);">Data</label>
+                                    <input type="date" class="form-control">
                                 </div>
-                                <div class="col-md-6 mt-4 mt-md-0">
-                                    <label class="form-label fw-bold">Horário</label>
-                                    <select class="form-select form-select-lg">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold" style="color: var(--text-color);">Horário</label>
+                                    <select class="form-select">
                                         <option>Selecione...</option>
                                         <option>09:00</option>
                                         <option>09:30</option>
@@ -99,8 +99,8 @@
                                 </div>
                             </div>
                             <div class="mb-4">
-                                <label class="form-label fw-bold">Profissional</label>
-                                <select class="form-select form-select-lg">
+                                <label class="form-label fw-bold" style="color: var(--text-color);">Profissional</label>
+                                <select class="form-select">
                                     <option>Sem preferência</option>
                                     <option>Ana Paula</option>
                                     <option>Carla Mendes</option>
@@ -108,25 +108,25 @@
                                 </select>
                             </div>
                             <div class="mb-4">
-                                <label class="form-label fw-bold">Observações (opcional)</label>
-                                <textarea class="form-control form-control-lg" rows="3" placeholder="Alguma preferência ou informação adicional?"></textarea>
+                                <label class="form-label fw-bold" style="color: var(--text-color);">Observações (opcional)</label>
+                                <textarea class="form-control" rows="3" placeholder="Alguma preferência ou informação adicional?"></textarea>
                             </div>
-                            <button type="button" class="btn btn-primary btn-lg w-100 py-3 mt-3">Confirmar Agendamento</button>
+                            <button type="button" class="btn btn-primary w-100 py-3 mt-3">Confirmar Agendamento</button>
                         </form>
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="card border-0 shadow-sm p-4 mb-4">
-                        <h3 class="h5 mb-3" style="color: var(--primary-color);">📍 Endereço</h3>
-                        <p class="text-muted mb-0">Rua das Flores, 123 — Centro<br>São Paulo — SP<br>CEP: 01310-000</p>
+                    <div class="card p-4 mb-4">
+                        <h3 class="h5 mb-3" style="color: #2d1b2e;">📍 Endereço</h3>
+                        <p style="color: #333333;">Rua das Flores, 123 — Centro<br>São Paulo — SP<br>CEP: 01310-000</p>
                     </div>
-                    <div class="card border-0 shadow-sm p-4 mb-4">
-                        <h3 class="h5 mb-3" style="color: var(--primary-color);">🕐 Horário de Funcionamento</h3>
-                        <p class="text-muted mb-0">Segunda a Sexta: 9h às 20h<br>Sábado: 9h às 18h<br>Domingo: Fechado</p>
+                    <div class="card p-4 mb-4">
+                        <h3 class="h5 mb-3" style="color: #2d1b2e;">🕐 Horário de Funcionamento</h3>
+                        <p style="color: #333333;">Segunda a Sexta: 9h às 20h<br>Sábado: 9h às 18h<br>Domingo: Fechado</p>
                     </div>
-                    <div class="card border-0 shadow-sm p-4">
-                        <h3 class="h5 mb-3" style="color: var(--primary-color);">ℹ Política de Cancelamento</h3>
-                        <p class="text-muted mb-0">Cancele com até 2h de antecedência pelo WhatsApp sem nenhuma taxa.</p>
+                    <div class="card p-4">
+                        <h3 class="h5 mb-3" style="color: #2d1b2e;">ℹ Política de Cancelamento</h3>
+                        <p style="color: #333333;">Cancele com até 2h de antecedência pelo WhatsApp sem nenhuma taxa.</p>
                     </div>
                 </div>
             </div>
@@ -137,63 +137,82 @@
         <div class="container py-5">
             <div class="text-center mb-5">
                 <h2 class="section-title">Perguntas <span>Frequentes</span></h2>
+                <div class="section-divider"></div>
             </div>
             <div class="row g-4">
                 <div class="col-md-6">
-                    <div class="card border-0 p-4 shadow-sm h-100">
-                        <h4 class="h5 mb-3">Como cancelar meu agendamento?</h4>
-                        <p class="text-muted mb-0">Cancele com até 2 horas de antecedência pelo WhatsApp (11) 99999-9999.</p>
+                    <div class="card p-5 h-100">
+                        <h4 class="h5 mb-3" style="color: var(--primary-color);">Como cancelar meu agendamento?</h4>
+                        <p style="color: var(--text-light);">Cancele com até 2 horas de antecedência pelo WhatsApp (11) 99999-9999.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="card border-0 p-4 shadow-sm h-100">
-                        <h4 class="h5 mb-3">Posso remarcar o horário?</h4>
-                        <p class="text-muted mb-0">Sim! Entre em contato pelo WhatsApp ou Instagram e remarcaremos sem custo.</p>
+                    <div class="card p-5 h-100">
+                        <h4 class="h5 mb-3" style="color: var(--primary-color);">Posso remarcar o horário?</h4>
+                        <p style="color: var(--text-light);">Sim! Entre em contato pelo WhatsApp ou Instagram e remarcaremos sem custo.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="card border-0 p-4 shadow-sm h-100">
-                        <h4 class="h5 mb-3">Recebo confirmação por e-mail?</h4>
-                        <p class="text-muted mb-0">Sim! Você recebe confirmação e um lembrete 24h antes do seu agendamento.</p>
+                    <div class="card p-5 h-100">
+                        <h4 class="h5 mb-3" style="color: var(--primary-color);">Recebo confirmação por e-mail?</h4>
+                        <p style="color: var(--text-light);">Sim! Você recebe confirmação e um lembrete 24h antes do seu agendamento.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="card border-0 p-4 shadow-sm h-100">
-                        <h4 class="h5 mb-3">Quando pago pelo serviço?</h4>
-                        <p class="text-muted mb-0">O pagamento é realizado presencialmente após o serviço. Aceitamos Pix, cartão e dinheiro.</p>
+                    <div class="card p-5 h-100">
+                        <h4 class="h5 mb-3" style="color: var(--primary-color);">Quando pago pelo serviço?</h4>
+                        <p style="color: var(--text-light);">O pagamento é realizado presencialmente após o serviço. Aceitamos Pix, cartão e dinheiro.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="cta-final py-5 text-center text-white">
+    <div class="hero py-5 text-center">
         <div class="container py-5">
-            <h2 class="display-5 mb-4">Dúvidas? Fale <span>conosco!</span></h2>
+            <h2 class="display-4 mb-4">Dúvidas? Fale <span>conosco!</span></h2>
             <p class="lead mb-5">Estamos disponíveis pelo WhatsApp para ajudar você em cada detalhe.</p>
-            <div class="d-flex justify-content-center gap-3">
-                <a href="servicos.html" class="btn btn-primary btn-lg px-5">Ver Serviços</a>
-                <a href="index.html" class="btn btn-outline-light btn-lg px-5">Voltar ao Início</a>
+            <div class="d-flex justify-content-center gap-4 flex-wrap">
+                <a href="servicos.html" class="btn btn-primary btn-lg">Ver Serviços</a>
+                <a href="index.html" class="btn btn-outline-light btn-lg">Voltar ao Início</a>
             </div>
         </div>
     </div>
 
-    <footer class="bg-dark text-white py-5">
+    <footer>
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
-                    <div class="footer-logo">Agenda <span>Glow Up</span></div>
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a href="#" class="footer-logo">Agenda <span>Glow Up</span></a>
+                    <p class="text-muted">Referência em beleza e estética de luxo. Nossa missão é realçar sua beleza natural com sofisticação e cuidado.</p>
                 </div>
-                <div class="col-md-4 text-center mb-4 mb-md-0">
+                <div class="col-lg-2 footer-info">
+                    <h5>Navegação</h5>
                     <div class="footer-links">
-                        <a href="index.html" class="text-white text-decoration-none mx-2">Início</a>
-                        <a href="servicos.html" class="text-white text-decoration-none mx-2">Serviços</a>
-                        <a href="agendamento.html" class="text-white text-decoration-none mx-2">Agendar</a>
+                        <a href="index.html">Início</a>
+                        <a href="servicos.html">Serviços</a>
+                        <a href="agendamento.html">Agendar</a>
                     </div>
                 </div>
-                <div class="col-md-4 text-center text-md-end">
-                    <p class="footer-copy mb-0">© 2026 Agenda Glow Up. Elegância em cada detalhe.</p>
+                <div class="col-lg-3 footer-info">
+                    <h5>Serviços Premium</h5>
+                    <div class="footer-links">
+                        <a href="servicos.html">Cabelo & Tratamentos</a>
+                        <a href="servicos.html">Unhas & Nail Art</a>
+                        <a href="servicos.html">Sobrancelha & Maquiagem</a>
+                    </div>
                 </div>
+                <div class="col-lg-3 footer-info">
+                    <h5>Contato</h5>
+                    <div class="footer-links">
+                        <a href="#">📍 Rua das Flores, 123 - SP</a>
+                        <a href="#">📞 (11) 99999-9999</a>
+                        <a href="#">✉ contato@glowup.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p>© 2026 Agenda Glow Up. Todos os direitos reservados. Elegância em cada detalhe.</p>
             </div>
         </div>
     </footer>
