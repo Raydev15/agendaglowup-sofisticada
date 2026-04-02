@@ -3,221 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agendamento - Agenda Glow Up">
     <title>Agendamento — Agenda Glow Up</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand logo" href="index.html">Agenda <span>Glow Up</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand" href="index.html">Agenda <span>Glow Up</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-                    <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
-                    <li class="nav-item"><a class="nav-link active btn-agendar px-4 ms-lg-3" href="agendamento.html">Agendar</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicos.html">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-nav ms-2 active" href="agendamento.html">Agendar</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="hero d-flex align-items-center" style="padding: 80px 0;">
+    <!-- HERO SECTION -->
+    <section class="hero d-flex align-items-center" style="padding: 80px 0;">
         <div class="container text-center">
-            <h1 class="display-3 mb-3">Faça seu <span>Agendamento</span></h1>
-            <p class="lead mb-4">Preencha o formulário abaixo e garanta seu horário exclusivo.</p>
+            <h1>Faça seu <span>Agendamento</span></h1>
+            <p>Preencha o formulário abaixo e garanta seu horário exclusivo.</p>
         </div>
-    </header>
+    </section>
 
-    <section class="py-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-8">
-                    <div class="card p-4 p-md-5">
-                        <h2 class="h4 mb-4" style="color: var(--primary-color);">Novo Agendamento</h2>
-                        <form>
+    <!-- FORM SECTION -->
+    <section class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-8">
+                <div class="card-service">
+                    <div class="card-service-body">
+                        <h2 style="color: var(--primary); margin-bottom: 2rem;">Novo Agendamento</h2>
+                        <form id="agendamentoForm">
                             <div class="mb-4">
-                                <label class="form-label fw-bold" style="color: var(--text-color);">Seu Nome Completo</label>
-                                <input type="text" class="form-control" placeholder="Ex: Maria Silva">
+                                <label for="nome" class="form-label fw-bold">Seu Nome Completo</label>
+                                <input type="text" class="form-control" id="nome" placeholder="Ex: Maria Silva" required>
                             </div>
                             <div class="row mb-4">
                                 <div class="col-md-6">
-                                    <label class="form-label fw-bold" style="color: var(--text-color);">E-mail</label>
-                                    <input type="email" class="form-control" placeholder="seu@email.com">
+                                    <label for="email" class="form-label fw-bold">E-mail</label>
+                                    <input type="email" class="form-control" id="email" placeholder="seu@email.com" required>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label fw-bold" style="color: var(--text-color);">WhatsApp</label>
-                                    <input type="tel" class="form-control" placeholder="(11) 99999-9999">
+                                    <label for="whatsapp" class="form-label fw-bold">WhatsApp</label>
+                                    <input type="tel" class="form-control" id="whatsapp" placeholder="(11) 99999-9999" required>
                                 </div>
                             </div>
                             <div class="mb-4">
-                                <label class="form-label fw-bold" style="color: var(--text-color);">Serviço Desejado</label>
-                                <select class="form-select">
+                                <label for="servico" class="form-label fw-bold">Serviço Desejado</label>
+                                <select class="form-select" id="servico" required>
                                     <option value="">Selecione um serviço...</option>
                                     <optgroup label="Cabelo">
-                                        <option>Corte Feminino — R$45</option>
-                                        <option>Escova Progressiva — R$180</option>
-                                        <option>Coloração — a partir de R$120</option>
+                                        <option value="corte">Corte Feminino — R$45</option>
+                                        <option value="escova">Escova Progressiva — R$180</option>
+                                        <option value="coloracao">Coloração — a partir de R$120</option>
                                     </optgroup>
                                     <optgroup label="Unhas">
-                                        <option>Manicure — R$35</option>
-                                        <option>Unhas em Gel — R$90</option>
-                                        <option>Nail Art — a partir de R$60</option>
+                                        <option value="manicure">Manicure — R$35</option>
+                                        <option value="gel">Unhas em Gel — R$90</option>
+                                        <option value="nailart">Nail Art — a partir de R$60</option>
                                     </optgroup>
                                     <optgroup label="Sobrancelha e Maquiagem">
-                                        <option>Design de Sobrancelha — R$30</option>
-                                        <option>Maquiagem Social — R$80</option>
-                                        <option>Pacote Completo — R$220</option>
+                                        <option value="sobrancelha">Design de Sobrancelha — R$30</option>
+                                        <option value="maquiagem">Maquiagem Social — R$80</option>
+                                        <option value="pacote">Pacote Completo — R$220</option>
                                     </optgroup>
                                 </select>
                             </div>
                             <div class="row mb-4">
                                 <div class="col-md-6">
-                                    <label class="form-label fw-bold" style="color: var(--text-color);">Data</label>
-                                    <input type="date" class="form-control">
+                                    <label for="data" class="form-label fw-bold">Data</label>
+                                    <input type="date" class="form-control" id="data" required>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label fw-bold" style="color: var(--text-color);">Horário</label>
-                                    <select class="form-select">
-                                        <option>Selecione...</option>
-                                        <option>09:00</option>
-                                        <option>09:30</option>
-                                        <option>10:30</option>
-                                        <option>11:00</option>
-                                        <option>13:00</option>
-                                        <option>13:30</option>
-                                        <option>14:00</option>
-                                        <option>15:00</option>
-                                        <option>16:00</option>
+                                    <label for="horario" class="form-label fw-bold">Horário</label>
+                                    <select class="form-select" id="horario" required>
+                                        <option value="">Selecione...</option>
+                                        <option value="09:00">09:00</option>
+                                        <option value="09:30">09:30</option>
+                                        <option value="10:30">10:30</option>
+                                        <option value="11:00">11:00</option>
+                                        <option value="13:00">13:00</option>
+                                        <option value="13:30">13:30</option>
+                                        <option value="14:00">14:00</option>
+                                        <option value="15:00">15:00</option>
+                                        <option value="16:00">16:00</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="mb-4">
-                                <label class="form-label fw-bold" style="color: var(--text-color);">Profissional</label>
-                                <select class="form-select">
-                                    <option>Sem preferência</option>
-                                    <option>Ana Paula</option>
-                                    <option>Carla Mendes</option>
-                                    <option>Juliana Costa</option>
+                                <label for="profissional" class="form-label fw-bold">Profissional</label>
+                                <select class="form-select" id="profissional">
+                                    <option value="">Sem preferência</option>
+                                    <option value="ana">Ana Paula</option>
+                                    <option value="carla">Carla Mendes</option>
+                                    <option value="juliana">Juliana Costa</option>
                                 </select>
                             </div>
                             <div class="mb-4">
-                                <label class="form-label fw-bold" style="color: var(--text-color);">Observações (opcional)</label>
-                                <textarea class="form-control" rows="3" placeholder="Alguma preferência ou informação adicional?"></textarea>
+                                <label for="observacoes" class="form-label fw-bold">Observações (opcional)</label>
+                                <textarea class="form-control" id="observacoes" rows="3" placeholder="Alguma preferência ou informação adicional?"></textarea>
                             </div>
-                            <button type="button" class="btn btn-primary w-100 py-3 mt-3">Confirmar Agendamento</button>
+                            <button type="submit" class="btn-primary-custom w-100" style="padding: 15px; font-size: 1rem;">Confirmar Agendamento</button>
                         </form>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="card p-4 mb-4">
-                        <h3 class="h5 mb-3" style="color: #2d1b2e;">📍 Endereço</h3>
-                        <p style="color: #333333;">Rua das Flores, 123 — Centro<br>São Paulo — SP<br>CEP: 01310-000</p>
+            </div>
+            <div class="col-lg-4">
+                <div class="card-service">
+                    <div class="card-service-body">
+                        <h5 style="color: var(--primary); margin-bottom: 1rem;">📍 Endereço</h5>
+                        <p>Rua das Flores, 123 — Centro<br>São Paulo — SP<br>CEP: 01310-000</p>
                     </div>
-                    <div class="card p-4 mb-4">
-                        <h3 class="h5 mb-3" style="color: #2d1b2e;">🕐 Horário de Funcionamento</h3>
-                        <p style="color: #333333;">Segunda a Sexta: 9h às 20h<br>Sábado: 9h às 18h<br>Domingo: Fechado</p>
+                </div>
+                <div class="card-service mt-3">
+                    <div class="card-service-body">
+                        <h5 style="color: var(--primary); margin-bottom: 1rem;">🕐 Horário de Funcionamento</h5>
+                        <p>Segunda a Sexta: 9h às 20h<br>Sábado: 9h às 18h<br>Domingo: Fechado</p>
                     </div>
-                    <div class="card p-4">
-                        <h3 class="h5 mb-3" style="color: #2d1b2e;">ℹ Política de Cancelamento</h3>
-                        <p style="color: #333333;">Cancele com até 2h de antecedência pelo WhatsApp sem nenhuma taxa.</p>
+                </div>
+                <div class="card-service mt-3">
+                    <div class="card-service-body">
+                        <h5 style="color: var(--primary); margin-bottom: 1rem;">ℹ️ Política de Cancelamento</h5>
+                        <p>Cancele com até 2h de antecedência pelo WhatsApp sem nenhuma taxa.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="bg-light py-5">
-        <div class="container py-5">
-            <div class="text-center mb-5">
-                <h2 class="section-title">Perguntas <span>Frequentes</span></h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="card p-5 h-100">
-                        <h4 class="h5 mb-3" style="color: var(--primary-color);">Como cancelar meu agendamento?</h4>
-                        <p style="color: var(--text-light);">Cancele com até 2 horas de antecedência pelo WhatsApp (11) 99999-9999.</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card p-5 h-100">
-                        <h4 class="h5 mb-3" style="color: var(--primary-color);">Posso remarcar o horário?</h4>
-                        <p style="color: var(--text-light);">Sim! Entre em contato pelo WhatsApp ou Instagram e remarcaremos sem custo.</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card p-5 h-100">
-                        <h4 class="h5 mb-3" style="color: var(--primary-color);">Recebo confirmação por e-mail?</h4>
-                        <p style="color: var(--text-light);">Sim! Você recebe confirmação e um lembrete 24h antes do seu agendamento.</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card p-5 h-100">
-                        <h4 class="h5 mb-3" style="color: var(--primary-color);">Quando pago pelo serviço?</h4>
-                        <p style="color: var(--text-light);">O pagamento é realizado presencialmente após o serviço. Aceitamos Pix, cartão e dinheiro.</p>
-                    </div>
-                </div>
+    <!-- CTA SECTION -->
+    <section class="bg-dark-custom">
+        <div class="container text-center">
+            <h2 class="section-title">Dúvidas? Fale <span>conosco!</span></h2>
+            <p class="section-subtitle">Estamos disponíveis pelo WhatsApp para ajudar você em cada detalhe.</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="servicos.html" class="btn-primary-custom">Ver Serviços</a>
+                <a href="index.html" class="btn-secondary-custom">Voltar ao Início</a>
             </div>
         </div>
     </section>
 
-    <div class="hero py-5 text-center">
-        <div class="container py-5">
-            <h2 class="display-4 mb-4">Dúvidas? Fale <span>conosco!</span></h2>
-            <p class="lead mb-5">Estamos disponíveis pelo WhatsApp para ajudar você em cada detalhe.</p>
-            <div class="d-flex justify-content-center gap-4 flex-wrap">
-                <a href="servicos.html" class="btn btn-primary btn-lg">Ver Serviços</a>
-                <a href="index.html" class="btn btn-outline-light btn-lg">Voltar ao Início</a>
-            </div>
-        </div>
-    </div>
-
+    <!-- FOOTER -->
     <footer>
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-4">
-                    <a href="#" class="footer-logo">Agenda <span>Glow Up</span></a>
-                    <p class="text-muted">Referência em beleza e estética de luxo. Nossa missão é realçar sua beleza natural com sofisticação e cuidado.</p>
+                    <div class="footer-brand">Agenda <span>Glow Up</span></div>
+                    <p class="footer-text">Referência em beleza e estética de luxo. Nossa missão é realçar sua beleza natural com sofisticação e cuidado.</p>
                 </div>
-                <div class="col-lg-2 footer-info">
+                <div class="col-lg-2 footer-section">
                     <h5>Navegação</h5>
-                    <div class="footer-links">
-                        <a href="index.html">Início</a>
-                        <a href="servicos.html">Serviços</a>
-                        <a href="agendamento.html">Agendar</a>
-                    </div>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="agendamento.html">Agendar</a></li>
+                    </ul>
                 </div>
-                <div class="col-lg-3 footer-info">
+                <div class="col-lg-3 footer-section">
                     <h5>Serviços Premium</h5>
-                    <div class="footer-links">
-                        <a href="servicos.html">Cabelo & Tratamentos</a>
-                        <a href="servicos.html">Unhas & Nail Art</a>
-                        <a href="servicos.html">Sobrancelha & Maquiagem</a>
-                    </div>
+                    <ul class="footer-links">
+                        <li><a href="servicos.html">Cabelo & Tratamentos</a></li>
+                        <li><a href="servicos.html">Unhas & Nail Art</a></li>
+                        <li><a href="servicos.html">Sobrancelha & Maquiagem</a></li>
+                    </ul>
                 </div>
-                <div class="col-lg-3 footer-info">
+                <div class="col-lg-3 footer-section">
                     <h5>Contato</h5>
-                    <div class="footer-links">
-                        <a href="#">📍 Rua das Flores, 123 - SP</a>
-                        <a href="#">📞 (11) 99999-9999</a>
-                        <a href="#">✉ contato@glowup.com</a>
-                    </div>
+                    <ul class="footer-links">
+                        <li><a href="#">📍 Rua das Flores, 123 - SP</a></li>
+                        <li><a href="#">📞 (11) 99999-9999</a></li>
+                        <li><a href="#">✉️ contato@glowup.com</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="footer-bottom text-center">
+            <div class="footer-bottom">
                 <p>© 2026 Agenda Glow Up. Todos os direitos reservados. Elegância em cada detalhe.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('agendamentoForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Agendamento realizado com sucesso! Você receberá uma confirmação por e-mail.');
+            this.reset();
+        });
+    </script>
 </body>
 </html>

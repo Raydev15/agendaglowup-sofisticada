@@ -3,126 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Serviços - Agenda Glow Up">
     <title>Serviços — Agenda Glow Up</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand logo" href="index.html">Agenda <span>Glow Up</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand" href="index.html">Agenda <span>Glow Up</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="servicos.html">Serviços</a></li>
-                    <li class="nav-item"><a class="nav-link btn-agendar px-4 ms-lg-3" href="agendamento.html">Agendar</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="servicos.html">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-nav ms-2" href="agendamento.html">Agendar</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="hero d-flex align-items-center" style="padding: 80px 0;">
+    <!-- HERO SECTION -->
+    <section class="hero d-flex align-items-center" style="padding: 80px 0;">
         <div class="container text-center">
-            <h1 class="display-3 mb-3">Nossos <span>Serviços</span></h1>
-            <p class="lead mb-4">Conheça todos os serviços disponíveis e agende com facilidade.</p>
-            <a href="agendamento.html" class="btn btn-primary btn-lg">Agendar Agora</a>
+            <h1>Nossos <span>Serviços</span></h1>
+            <p>Conheça todos os serviços disponíveis e agende com facilidade.</p>
+            <a href="agendamento.html" class="btn-primary-custom">Agendar Agora</a>
         </div>
-    </header>
+    </section>
 
-    <section class="py-5">
-        <div class="container py-5">
-            <div class="text-center mb-5">
-                <h2 class="section-title">Cabelo & <span>Tratamentos</span></h2>
-                <div class="section-divider"></div>
+    <!-- CABELO SECTION -->
+    <section class="container">
+        <h2 class="section-title">Cabelo & <span>Tratamentos</span></h2>
+        <div class="divider"></div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card-service">
+                    <div class="card-service-header">
+                        <h3>✂️ Corte Feminino</h3>
+                    </div>
+                    <div class="card-service-body">
+                        <p>Corte personalizado com lavagem e finalização profissional.</p>
+                        <div class="price-tag">R$45 <small>/ 60 min</small></div>
+                        <a href="agendamento.html" class="btn-service">Agendar</a>
+                    </div>
+                </div>
             </div>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 overflow-hidden">
-                        <div class="card-header-custom text-center">
-                            <h3>✂ Corte Feminino</h3>
-                        </div>
-                        <div class="card-body p-4 text-center">
-                            <p class="text-muted">Corte personalizado com lavagem e finalização profissional.</p>
-                            <div class="price mb-4">R$<span>45</span> / 60 min</div>
-                            <a href="agendamento.html" class="btn btn-primary w-100">Agendar</a>
-                        </div>
+            <div class="col-md-4">
+                <div class="card-service">
+                    <div class="card-service-header">
+                        <h3>✨ Escova Progressiva</h3>
+                    </div>
+                    <div class="card-service-body">
+                        <p>Redução de volume e frizz com tratamento de longa duração.</p>
+                        <div class="price-tag">R$180 <small>/ 3h</small></div>
+                        <a href="agendamento.html" class="btn-service">Agendar</a>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100 overflow-hidden">
-                        <div class="card-header-custom text-center">
-                            <h3>✨ Escova Progressiva</h3>
-                        </div>
-                        <div class="card-body p-4 text-center">
-                            <p class="text-muted">Redução de volume e frizz com tratamento de longa duração.</p>
-                            <div class="price mb-4">R$<span>180</span> / 3h</div>
-                            <a href="agendamento.html" class="btn btn-primary w-100">Agendar</a>
-                        </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-service">
+                    <div class="card-service-header">
+                        <h3>🎨 Coloração</h3>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 overflow-hidden">
-                        <div class="card-header-custom text-center">
-                            <h3>🎨 Coloração</h3>
-                        </div>
-                        <div class="card-body p-4 text-center">
-                            <p class="text-muted">Coloração completa, mechas ou balayage com produtos premium.</p>
-                            <div class="price mb-4">A partir de R$<span>120</span> / 2h</div>
-                            <a href="agendamento.html" class="btn btn-primary w-100">Agendar</a>
-                        </div>
+                    <div class="card-service-body">
+                        <p>Coloração completa, mechas ou balayage com produtos premium.</p>
+                        <div class="price-tag">R$120+ <small>/ 2h</small></div>
+                        <a href="agendamento.html" class="btn-service">Agendar</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="bg-light py-5">
-        <div class="container py-5">
-            <div class="text-center mb-5">
-                <h2 class="section-title">Unhas & <span>Nail Art</span></h2>
-                <div class="section-divider"></div>
-            </div>
+    <!-- UNHAS SECTION -->
+    <section class="bg-light-custom">
+        <div class="container">
+            <h2 class="section-title">Unhas & <span>Nail Art</span></h2>
+            <div class="divider"></div>
+            
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="card h-100 overflow-hidden">
-                        <div class="card-header-custom text-center">
+                    <div class="card-service">
+                        <div class="card-service-header">
                             <h3>💅 Manicure</h3>
                         </div>
-                        <div class="card-body p-4 text-center">
-                            <p class="text-muted">Cutilagem, esmaltação simples ou francesa com acabamento perfeito.</p>
-                            <div class="price mb-4">R$<span>35</span> / 45 min</div>
-                            <a href="agendamento.html" class="btn btn-primary w-100">Agendar</a>
+                        <div class="card-service-body">
+                            <p>Cutilagem, esmaltação simples ou francesa com acabamento perfeito.</p>
+                            <div class="price-tag">R$35 <small>/ 45 min</small></div>
+                            <a href="agendamento.html" class="btn-service">Agendar</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card h-100 overflow-hidden">
-                        <div class="card-header-custom text-center">
+                    <div class="card-service">
+                        <div class="card-service-header">
                             <h3>💎 Unhas em Gel</h3>
                         </div>
-                        <div class="card-body p-4 text-center">
-                            <p class="text-muted">Alongamento e esmaltação em gel de longa duração.</p>
-                            <div class="price mb-4">R$<span>90</span> / 90 min</div>
-                            <a href="agendamento.html" class="btn btn-primary w-100">Agendar</a>
+                        <div class="card-service-body">
+                            <p>Alongamento e esmaltação em gel de longa duração.</p>
+                            <div class="price-tag">R$90 <small>/ 90 min</small></div>
+                            <a href="agendamento.html" class="btn-service">Agendar</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card h-100 overflow-hidden">
-                        <div class="card-header-custom text-center">
+                    <div class="card-service">
+                        <div class="card-service-header">
                             <h3>⭐ Nail Art</h3>
                         </div>
-                        <div class="card-body p-4 text-center">
-                            <p class="text-muted">Decoração artística personalizada com glitter e pedras.</p>
-                            <div class="price mb-4">A partir de R$<span>60</span> / 60 min</div>
-                            <a href="agendamento.html" class="btn btn-primary w-100">Agendar</a>
+                        <div class="card-service-body">
+                            <p>Decoração artística personalizada com glitter e pedras.</p>
+                            <div class="price-tag">R$60+ <small>/ 60 min</small></div>
+                            <a href="agendamento.html" class="btn-service">Agendar</a>
                         </div>
                     </div>
                 </div>
@@ -130,103 +135,102 @@
         </div>
     </section>
 
-    <section class="py-5">
-        <div class="container py-5">
-            <div class="text-center mb-5">
-                <h2 class="section-title">Sobrancelha & <span>Maquiagem</span></h2>
-                <div class="section-divider"></div>
+    <!-- SOBRANCELHA SECTION -->
+    <section class="container">
+        <h2 class="section-title">Sobrancelha & <span>Maquiagem</span></h2>
+        <div class="divider"></div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card-service">
+                    <div class="card-service-header">
+                        <h3>👁️ Design de Sobrancelha</h3>
+                    </div>
+                    <div class="card-service-body">
+                        <p>Modelagem personalizada com henna para realçar o olhar.</p>
+                        <div class="price-tag">R$30 <small>/ 30 min</small></div>
+                        <a href="agendamento.html" class="btn-service">Agendar</a>
+                    </div>
+                </div>
             </div>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 overflow-hidden">
-                        <div class="card-header-custom text-center">
-                            <h3>👁 Design de Sobrancelha</h3>
-                        </div>
-                        <div class="card-body p-4 text-center">
-                            <p class="text-muted">Modelagem personalizada com henna para realçar o olhar.</p>
-                            <div class="price mb-4">R$<span>30</span> / 30 min</div>
-                            <a href="agendamento.html" class="btn btn-primary w-100">Agendar</a>
-                        </div>
+            <div class="col-md-4">
+                <div class="card-service">
+                    <div class="card-service-header">
+                        <h3>😊 Maquiagem Social</h3>
+                    </div>
+                    <div class="card-service-body">
+                        <p>Maquiagem para eventos e festas com produtos profissionais.</p>
+                        <div class="price-tag">R$80 <small>/ 60 min</small></div>
+                        <a href="agendamento.html" class="btn-service">Agendar</a>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100 overflow-hidden">
-                        <div class="card-header-custom text-center">
-                            <h3>😊 Maquiagem Social</h3>
-                        </div>
-                        <div class="card-body p-4 text-center">
-                            <p class="text-muted">Maquiagem para eventos e festas com produtos profissionais.</p>
-                            <div class="price mb-4">R$<span>80</span> / 60 min</div>
-                            <a href="agendamento.html" class="btn btn-primary w-100">Agendar</a>
-                        </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-service">
+                    <div class="card-service-header">
+                        <h3>🌸 Pacote Completo</h3>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 overflow-hidden">
-                        <div class="card-header-custom text-center">
-                            <h3>🌸 Pacote Completo</h3>
-                        </div>
-                        <div class="card-body p-4 text-center">
-                            <p class="text-muted">Cabelo + Unhas + Sobrancelha + Maquiagem com desconto especial.</p>
-                            <div class="price mb-4">R$<span>220</span> / pacote</div>
-                            <a href="agendamento.html" class="btn btn-primary w-100">Agendar</a>
-                        </div>
+                    <div class="card-service-body">
+                        <p>Cabelo + Unhas + Sobrancelha + Maquiagem com desconto.</p>
+                        <div class="price-tag">R$220 <small>/ pacote</small></div>
+                        <a href="agendamento.html" class="btn-service">Agendar</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="hero py-5 text-center">
-        <div class="container py-5">
-            <h2 class="display-4 mb-4">Pronta para agendar seu <span>serviço?</span></h2>
-            <p class="lead mb-5">Escolha o horário ideal e garanta seu atendimento exclusivo.</p>
-            <div class="d-flex justify-content-center gap-4 flex-wrap">
-                <a href="agendamento.html" class="btn btn-primary btn-lg">Agendar Agora</a>
-                <a href="index.html" class="btn btn-outline-light btn-lg">Voltar ao Início</a>
+    <!-- CTA SECTION -->
+    <section class="bg-dark-custom">
+        <div class="container text-center">
+            <h2 class="section-title">Pronta para agendar seu <span>serviço?</span></h2>
+            <p class="section-subtitle">Escolha o horário ideal e garanta seu atendimento exclusivo.</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="agendamento.html" class="btn-primary-custom">Agendar Agora</a>
+                <a href="index.html" class="btn-secondary-custom">Voltar ao Início</a>
             </div>
         </div>
-    </div>
+    </section>
 
+    <!-- FOOTER -->
     <footer>
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-4">
-                    <a href="#" class="footer-logo">Agenda <span>Glow Up</span></a>
-                    <p class="text-muted">Referência em beleza e estética de luxo. Nossa missão é realçar sua beleza natural com sofisticação e cuidado.</p>
+                    <div class="footer-brand">Agenda <span>Glow Up</span></div>
+                    <p class="footer-text">Referência em beleza e estética de luxo. Nossa missão é realçar sua beleza natural com sofisticação e cuidado.</p>
                 </div>
-                <div class="col-lg-2 footer-info">
+                <div class="col-lg-2 footer-section">
                     <h5>Navegação</h5>
-                    <div class="footer-links">
-                        <a href="index.html">Início</a>
-                        <a href="servicos.html">Serviços</a>
-                        <a href="agendamento.html">Agendar</a>
-                    </div>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="agendamento.html">Agendar</a></li>
+                    </ul>
                 </div>
-                <div class="col-lg-3 footer-info">
+                <div class="col-lg-3 footer-section">
                     <h5>Serviços Premium</h5>
-                    <div class="footer-links">
-                        <a href="servicos.html">Cabelo & Tratamentos</a>
-                        <a href="servicos.html">Unhas & Nail Art</a>
-                        <a href="servicos.html">Sobrancelha & Maquiagem</a>
-                    </div>
+                    <ul class="footer-links">
+                        <li><a href="servicos.html">Cabelo & Tratamentos</a></li>
+                        <li><a href="servicos.html">Unhas & Nail Art</a></li>
+                        <li><a href="servicos.html">Sobrancelha & Maquiagem</a></li>
+                    </ul>
                 </div>
-                <div class="col-lg-3 footer-info">
+                <div class="col-lg-3 footer-section">
                     <h5>Contato</h5>
-                    <div class="footer-links">
-                        <a href="#">📍 Rua das Flores, 123 - SP</a>
-                        <a href="#">📞 (11) 99999-9999</a>
-                        <a href="#">✉ contato@glowup.com</a>
-                    </div>
+                    <ul class="footer-links">
+                        <li><a href="#">📍 Rua das Flores, 123 - SP</a></li>
+                        <li><a href="#">📞 (11) 99999-9999</a></li>
+                        <li><a href="#">✉️ contato@glowup.com</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="footer-bottom text-center">
+            <div class="footer-bottom">
                 <p>© 2026 Agenda Glow Up. Todos os direitos reservados. Elegância em cada detalhe.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
