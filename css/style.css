@@ -1,0 +1,195 @@
+/* 
+   Versão Sofisticada - Agenda Glow Up
+   Paleta de Cores: 
+   - Primária: #2d1b2e (Roxo Profundo)
+   - Secundária: #d4af37 (Dourado)
+   - Acento: #f8f1f1 (Off-white)
+   - Texto: #4a4a4a (Cinza Escuro)
+*/
+
+:root {
+    --primary-color: #2d1b2e;
+    --secondary-color: #d4af37;
+    --accent-color: #f8f1f1;
+    --text-color: #4a4a4a;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--white);
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--secondary-color);
+}
+
+.nav-link {
+    font-weight: 400;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--secondary-color) !important;
+}
+
+.btn-agendar {
+    background-color: var(--secondary-color);
+    color: var(--primary-color) !important;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-agendar:hover {
+    background-color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(45, 27, 46, 0.85), rgba(45, 27, 46, 0.85)), 
+                url('https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    color: var(--white);
+}
+
+.hero h1 span {
+    color: var(--secondary-color);
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #c19b2e;
+    border-color: #c19b2e;
+    color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-outline-light {
+    border-radius: 50px;
+    border-width: 2px;
+    font-weight: 600;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title span {
+    color: var(--secondary-color);
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    margin: 10px auto 0;
+}
+
+/* Cards */
+.step-number {
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+    color: rgba(212, 175, 55, 0.2);
+    font-weight: 900;
+    line-height: 1;
+}
+
+.card-header-custom {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.card-header-custom h3 {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+}
+
+.price {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.price span {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* CTA Final */
+.cta-final {
+    background-color: var(--primary-color);
+}
+
+.cta-final h2 span {
+    color: var(--secondary-color);
+}
+
+/* Footer */
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.footer-logo span {
+    color: var(--secondary-color);
+}
+
+.footer-links a {
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--secondary-color) !important;
+}
+
+/* Table Customization */
+.table-dark {
+    background-color: var(--primary-color);
+}
+
+/* Form Customization */
+.form-control:focus, .form-select:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+}
